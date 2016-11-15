@@ -23,8 +23,8 @@
             console.log("Page Done Loading");
           
             $('#loader').fadeOut(500); 
-            $('.section-left').delay(500).hide("slide", { direction: "left" }, 400);
-            $('.section-right').delay(500).hide("slide", { direction: "right" }, 400);
+            $('.section-left').delay(500).hide("slide", { direction: "left" }, 500);
+            $('.section-right').delay(500).hide("slide", { direction: "right" }, 500);
 
             setTimeout(function () {
                 $('#loader-wrapper').remove();
@@ -33,7 +33,7 @@
         }
       
         $(document).ready(function () {
-            hideLoader();
+            //hideLoader();
         });
 
 
