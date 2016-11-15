@@ -20,6 +20,8 @@
         
         function hideLoader() {
             
+            console.log("Page Done Loading");
+          
             $('#loader').fadeOut(500); 
             $('.section-left').delay(500).hide("slide", { direction: "left" }, 400);
             $('.section-right').delay(500).hide("slide", { direction: "right" }, 400);
