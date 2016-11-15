@@ -17,8 +17,8 @@
   
    <!-- Jquery -->
     <script type="text/javascript">
-
-        $(document).ready(function () {
+        
+        function hideLoader() {
             
             $('#loader').fadeOut(500); 
             $('.section-left').delay(500).hide("slide", { direction: "left" }, 400);
@@ -27,6 +27,11 @@
             setTimeout(function () {
                 $('#loader-wrapper').remove();
             }, 1500);
+          
+        }
+      
+        $(document).ready(function () {
+            hideLoader();
         });
 
 
