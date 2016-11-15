@@ -3,17 +3,34 @@
 
 <body>
 
- <link rel="stylesheet" type="text/css" href="./main.css">
+  <link rel="stylesheet" type="text/css" href="./main.css">
 
-<div id="loader-wrapper">
+  <div id="loader-wrapper">
 
-<div id="loader"></div>
+    <div id="loader"></div>
+    <div class="loading-section section-left"></div>
+    <div class="loading-section section-right"></div>
+  </div>
+ 
+  <script src="./js/jquery/jquery.min.js"></script>
+  <script src="./js/jquery/jqueryui.min.js"></script>
+  
+   <!-- Jquery -->
+    <script type="text/javascript">
 
-<div class="loading-section section-left"></div>
-<div class="loading-section section-right"></div>
+        $(document).ready(function () {
+            
+            $('#loader').fadeOut(500); 
+            $('.section-left').delay(500).hide("slide", { direction: "left" }, 500);
+            $('.section-right').delay(500).hide("slide", { direction: "right" }, 500);
+
+            setTimeout(function () {
+                $('#loader-wrapper').remove();
+            }, 1500);
+        });
 
 
-</dig>
-
+    </script>
+  
 </body>
 </html>
